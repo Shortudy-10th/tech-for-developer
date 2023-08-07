@@ -34,7 +34,7 @@
 - **Link**
     - Verify : 자바 언어 명세 및 JVM 명세에 명시된 대로 구성되어 있는지 검증
     - Prepare : 클래스가 필요로 하는 메모리 할당(필드, 메소드, 인터페이스 등)
-    - Resolve : 클래스 상수 풀 내 모든 심볼릭 레퍼런스를 다이렉트 레펀런스로 변경
+    - Resolve : 클래스 상수 풀 내 모든 심볼릭 레퍼런스를 다이렉트 레퍼런스로 변경
 - **Initalization**
     - 클래스 변수들을 적절한 값으로 초기화 함
 
@@ -60,19 +60,24 @@
     정보, 데이터 Type 정보, static 변수, final class, Runtime Constant Pool 등 프로그램
     실행할 때 필요한 데이터들이 저장되는 영역
     - Class Area나 Static Area로도 부름
+      
 - **Heap Area**
     - 모든 스레드가 공유함
     - new 키워드로 생성된 객체와 배열이 저장되는 영역
-    - GC가 관리함
+    - Garbage Collection이 관리함
+      - Garbage Collection : 메모리 관리를 위해 Heap 영역에 동적으로 생성됐으나 더 이상 사용하지 않는 불필요한 객체들을 모아 주기적으로 제거하는 프로세스
+        
 - **Stack Area**
     - 스레드 별로 생성됨
     - 함수 실행 시 지역 변수, 파라미터, 리턴 값 등 함수 내부에서 일시적으로 쓰이는 값들이
     저장되는 영역
     - 함수가 호출될 때마다 그 함수를 위한 스택 프레임이 쌓이고, 종료되면 삭제됨
+      
 - **PC Register**
     - 스레드 별로 생성
     - 스레드가 생성될 때마다 생기는 영역으로, 현재 수행 중인 JVM 명령어 주소를 저장함
     - JVM 명령어 주소는 스레드가 실행 중인 부분을 기록하고 있음
+      
 - **Native Method stack**
     - Java 이외의 언어 혹은 기계어로 작성된 네이티브 코드를 실행할 때 사용되는 메모리 영역
 
@@ -135,7 +140,11 @@ Java의 경우 Call By Value를 채택하고 있으며, 자료형에 따라 Call
 
 크게 Primitive Type과 Reference Type으로 나뉜다. Primitive는 실제 값을 저장하고, Reference는 값이 저장된 메모리 주소를 가리키는 값을 저장한다. Primitive에는 boolean, char, byte, short, int, long, float, double 8가지가 있으며 범위가 작은 타입은 큰 타입으로 묵시적 형변환이 가능하다. 반대의 경우 명시적 형변환이 가능하며 값의 손실이 일어날 수 있다. Reference는 크게 객체형과 배열형으로 나눌 수 있는데, 객체형은 클래스를 인스턴스화한 것을 가리키고, 배열형은 같은 타입을 값을 연속적인 공간에 여러 개를 모아둔 자료구조를 가리킨다.
 
-Primitive에는 boolean, char, byte, short, int, long, float, double 8가지가 있으며 범위가 작은 타입은 큰 타입으로 묵시적 형변환이 가능하다. 반대의 경우 명시적 형변환이 가능하나 값의 손실이 일어날 수 있다. 또한 Primitive를 Reference형으로 바꾸는 Wrapper 객체가 있는데, 이들 간에는 오토박싱과 오토언박싱이 일어날 수 있다.
+<img src="https://github.com/seongeun42/cs-shortudy/assets/64778589/4df8a957-a17d-4539-9cc1-4c66a9e7aa45" width="700">
+
+Primitive에는 boolean, char, byte, short, int, long, float, double 8가지가 있으며 범위가 작은 타입은 큰 타입으로 묵시적 형변환이 가능하다. 반대의 경우 명시적 형변환이 가능하나 값의 손실이 일어날 수 있다. short와 char의 경우 char에는 음수를 표현할 부호 비트가 없기 때문에 호환되지 않는다.
+
+또한 Primitive를 Reference형으로 바꾸는 Wrapper 객체가 있는데, 이들 간에는 오토박싱과 오토언박싱이 일어날 수 있다. 예를 들어, int의 Wrapper 객체인 Integer와 int 간에는 `Integer i = 10;` 혹은 `int i = new Integer(10)` 으로 해도 오토박싱과 오토언박싱이 이뤄져 문제 없이 동작한다.
 
 Reference는 크게 객체형과 배열형으로 나뉘는데, 객체형은 클래스를 실제 값을 가지는 객체 인스턴스화 했을 때 힙 영역에 생기는 실제 값을 가리키는 주소 참조값을 가진다. 배열형은 배열이 실제로 생긴 메모리 주소의 참조값을 가진다. 객체형의 경우 상속 관계에 있다면 형변환이 가능하다.
 
