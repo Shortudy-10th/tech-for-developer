@@ -6,7 +6,7 @@
 
 ### ❓ Java 소스 파일의 컴파일과 실행 과정에 대해 설명해주세요.
 
-![copile](https://github.com/seongeun42/cs-shortudy/assets/64778589/c0f4715d-1e34-4bdf-9ad7-7a57ea823d58)
+<img src="https://github.com/seongeun42/cs-shortudy/assets/64778589/c0f4715d-1e34-4bdf-9ad7-7a57ea823d58" width="850"/>
 
 1. 자바 컴파일러(Java Compiler)가 소스 파일(.java)을 컴파일해 바이트 코드 파일(.class)을 생성
 2. 바이트 코드 파일을 JVM의 클래스 로더에게 전달
@@ -27,7 +27,7 @@
 
 ### ❓ 클래스 로더의 세부 동작 방식에 대해 설명해주세요.
 
-![class loader](https://github.com/seongeun42/cs-shortudy/assets/64778589/dfd07001-3e2f-43b1-99f7-581851feaf34)
+<img src="https://github.com/seongeun42/cs-shortudy/assets/64778589/dfd07001-3e2f-43b1-99f7-581851feaf34" width="700"/>
 
 - **Load**
     - 클래스 파일을 가져와 JVM의 메소드 영역에 로드
@@ -52,7 +52,7 @@
 
 ### ❓ JVM의 메모리 구조에 대해 설명해주세요.
 
-![JVM](https://github.com/seongeun42/cs-shortudy/assets/64778589/9fd0873f-6bc7-4a9f-8516-944977209976)
+<img src="https://github.com/seongeun42/cs-shortudy/assets/64778589/9fd0873f-6bc7-4a9f-8516-944977209976" width="700"/>
 
 - **Method Area**
     - 모든 스레드가 공유함
@@ -204,9 +204,9 @@ Reference는 크게 객체형과 배열형으로 나뉘는데, 객체형은 클�
 
 ### ❓ Java Collection에 대해서 설명해주세요.
 
-![collection](https://github.com/seongeun42/cs-shortudy/assets/64778589/f3564424-2c6b-449a-80e4-5a13e7a5f96d)
+<img src="https://github.com/seongeun42/cs-shortudy/assets/64778589/f3564424-2c6b-449a-80e4-5a13e7a5f96d" width="600"/>
 
-![collection2](https://github.com/seongeun42/cs-shortudy/assets/64778589/d71a39ec-5bf3-421a-8305-fcbd2c37b7f5)
+<img src="https://github.com/seongeun42/cs-shortudy/assets/64778589/d71a39ec-5bf3-421a-8305-fcbd2c37b7f5" width="800"/>
 
 Java Collection이란 데이터의 집합, 그룹을 의미하며 여러 자료구조를 구현해 놓은 클래스를 정의해둔 인터페이스를 포함하는 개념이다. 크게 List와 Set이 있는 Collection과 키와 값으로 이뤄진 HashMap을 가진 Map이 있다.
 
