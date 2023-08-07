@@ -144,7 +144,7 @@ Java의 경우 Call By Value를 채택하고 있으며, 자료형에 따라 Call
 
 Primitive에는 boolean, char, byte, short, int, long, float, double 8가지가 있으며 범위가 작은 타입은 큰 타입으로 묵시적 형변환이 가능하다. 반대의 경우 명시적 형변환이 가능하나 값의 손실이 일어날 수 있다. short와 char의 경우 char에는 음수를 표현할 부호 비트가 없기 때문에 호환되지 않는다.
 
-또한 Primitive를 Reference형으로 바꾸는 Wrapper 객체가 있는데, 이들 간에는 오토박싱과 오토언박싱이 일어날 수 있다. 예를 들어, int의 Wrapper 객체인 Integer와 int 간에는 `Integer i = 10;` 혹은 `int i = new Integer(10)` 으로 해도 오토박싱과 오토언박싱이 이뤄져 문제 없이 동작한다.
+또한 Primitive를 Reference형으로 바꾸는 Wrapper 객체가 있는데, 이들 간에는 오토박싱과 오토언박싱이 일어날 수 있다. 예를 들어, int의 Wrapper 객체인 Integer와 int 간에는 `Integer i = 10;` 혹은 `int i = new Integer(10);` 으로 해도 오토박싱과 오토언박싱이 이뤄져 문제 없이 동작한다.
 
 Reference는 크게 객체형과 배열형으로 나뉘는데, 객체형은 클래스를 실제 값을 가지는 객체 인스턴스화 했을 때 힙 영역에 생기는 실제 값을 가리키는 주소 참조값을 가진다. 배열형은 배열이 실제로 생긴 메모리 주소의 참조값을 가진다. 객체형의 경우 상속 관계에 있다면 형변환이 가능하다.
 
